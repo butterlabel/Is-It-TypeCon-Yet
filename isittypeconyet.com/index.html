@@ -1,0 +1,126 @@
+<?php
+    // Set the timezone:
+    date_default_timezone_set('America/Chicago');
+
+	// Get current time
+	$current = date("Y-m-d h:i:s");
+
+	// Set start date of Typecon
+	$typecon = "2012-07-31 00:00:00";
+
+	// Convert current and start times to a time-based value
+	$start = strtotime($typecon);
+	$now = strtotime($current);
+
+	//echo $start . " ";
+	//echo " " . $now;
+
+	if($start > $now) {
+		 $status = '<h1><a href="http://www.typecon.com"><img src="images/no.gif" alt="No!"></a></h1><p>That means you still have time to <a href="http://www.typecon.com/register">register to attend</a>&hellip;</p>';
+		 $title = "Nope. Sorry. Try again on July 31st.";
+	} else if($start < $now) {
+		$status = "Hellz Yeah!";
+		$title = "Type Crit - bring it!";
+	} else {
+		$status = "WTF";
+		$title = "TypeCon - WTF";
+	}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Is it Typecon yet? - <?php echo $title; ?></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Is It TypeCon Yet?">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://isittypeconyet.com/">
+  <meta property="og:image" content="http://isittypeconyet.com/images/logo-typecon.jpg">
+  <meta property="og:site_name" content="Is It TypeCon Yet?">
+  <meta property="og:description" content="You want to know whether TypeCon is happening. This will tell you.">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script src="http://use.typekit.com/jtc2nnf.js"></script>
+  <script >try{Typekit.load();}catch(e){}</script>
+  <style type="text/css" media="screen">
+  body {
+	  background: #ebebeb;
+	  color: #323232;
+	  font-family: "abril-text", georgia, serif;
+	  font-size: 100%;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: 1.5;
+	  text-align: center;
+  }
+
+  a {text-decoration: none;}
+  a:link, a:visited {color: #d5ae22;}
+  a:hover, a:active {color: #969799;}
+
+  b {font-weight: 600;}
+
+  h1 {
+	  font-weight: normal;
+	  margin: 3em 0 1.5em 0;
+  }
+
+  h1 img {
+  	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+  }
+
+  .wrap {
+	  margin: 0 auto;
+	  min-width: 18em;
+	  width: 55%;
+  }
+
+  .event-info {
+	  font-size: 1.5em;
+	  line-height: 1;
+	  margin-top: 1em;
+  }
+
+  .about {
+	  border-top: 1px solid #babcbe;
+	  box-shadow: 0 -1px 0 rgba(255,255,255,.75);
+	  margin-top: 1.5em;
+	  padding-top: 1.5em;
+	  text-align: left;
+  }
+
+  .about img {padding: 1.25em 0;}
+
+  .left {
+	  float: left;
+	  margin-right: 1em;
+  }
+  </style>
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+  <div class="wrap">
+    <h1><?php echo $status; ?></h1>
+
+	<p class="event-info"><b>TypeCon 2012: MKE&nbsp;SHIFT</b> <time class="dtstart" dateime="2012-07-31">July&nbsp;31</time>&nbsp;&ndash;&nbsp;<time class="dtend" dateime="2012-08-05">August&nbsp;5,&nbsp;2012</time></p>
+
+	<div class="fb-like" data-href="http://isittypeconyet.com/" data-send="false" data-width="360" data-show-faces="false"></div>
+
+	<div class="about">
+		<img src="images/typecon.png" alt="TypeCon" class="left">
+		<p><a href="http://www.typecon.com">TypeCon</a> is an annual conference presented by the non-profit <a href="http://typesociety.org">Society of Typographic Aficionados</a> (SOTA), an international organization dedicated to the promotion, study, and support of typography and related arts.</p>
+	</div>
+  </div>
+</body>
+</html>
