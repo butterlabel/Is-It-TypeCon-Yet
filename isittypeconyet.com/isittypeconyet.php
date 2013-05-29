@@ -1,6 +1,6 @@
 <?php
   // Set the timezone:
-  date_default_timezone_set('America/Chicago');
+  date_default_timezone_set('America/Los_Angeles');
 ?>
 <!-- In the <head>: -->
 <meta property="og:title" content="Is It TypeCon Yet?">
