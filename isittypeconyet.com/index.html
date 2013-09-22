@@ -1,10 +1,14 @@
 <?php
-    // Set the timezone:
-    date_default_timezone_set('America/Los_Angeles');
+  // Set the timezone:
+  date_default_timezone_set('America/Los_Angeles');
+    
+  require_once("phpflickr/phpFlickr.php");
+  include("group-photos.php");
 
 	// Get current time
 	$current = date("Y-m-d h:i:s");
-  // debug: $current = "2013-08-22 12:00:00";
+  // debug: 
+  $current = "2013-08-26 12:00:00";
 
 	// Set start date of Typecon
 	$typecon_start = "2013-08-21 00:00:00";
