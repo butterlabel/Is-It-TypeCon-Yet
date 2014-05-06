@@ -358,6 +358,7 @@ if ( !class_exists('phpFlickr') ) {
 			//file size exists)
 			$sizes = array(
 				"square" => "_s",
+        "large_square" => "_q",
 				"thumbnail" => "_t",
 				"small" => "_m",
 				"medium" => "",
