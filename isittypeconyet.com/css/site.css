@@ -2,108 +2,80 @@
 * {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 body {
-  background: #f9f9f9;
-  color: #21201e;
-  font-family: "abril-text", georgia, serif;
-  font-size: 100%;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: center;
+	background: #4d4d4f url(../images/condensed-background.svg) 50% 50% no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	font-family: "abril-text", georgia, serif;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 a {text-decoration: none;}
-a:link, a:visited {color: #dd0000;}
-a:hover, a:active {color: #000;}
+a:link, a:visited {color: #fff200;}
+a:hover, a:active {color: #a6ce39;}
 
 b {font-weight: 600;}
 
-h1 {
-  font-weight: normal;
-  margin: 3em 0 1.5em 0;
-}
-
-h1 img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
 .wrap {
-  margin: 0 auto;
-  min-width: 680px;
-  width: 75%;
+	margin: 0 auto;
+	min-width: 320px;
+	width: 75%;
 }
 
 .logo-image {
-  margin: 5em auto 0 auto;
-  width: 100%;
+	margin: 16em auto 0 auto;
+	min-width: 320px;
+	width: 75%;
 }
 
 .logo-image img {
-  text-align: center;
+	margin: 0;
+	text-align: center;
+}
+
+.sota-logo {
+	height: 30px;
+	margin: 0;
+	width: 122px;
 }
 
 .event-info {
-  clear: both;
-  font-size: 1.5em;
-  line-height: 1;
-  padding-top: 2em;
+	clear: both;
+	font-size: 1.5em;
+	line-height: 1;
+	padding-top: 0;
 }
 
-.group-photos {
-  height: 328px;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  width: 680px;
-}
-
-.group-photos li {
-  float: left;
-  margin: 0 8px 8px 0;
-  padding: 0;
-}
-
-.group-photos li img {
-  height: 150px;
-  vertical-align: bottom;
-  width: 150px;
-
-}
-
-.group-photos li a {
-  border: 5px solid rgb(255,255,255);
-  display: block;
-  outline: 1px solid #ccc;
-  -webkit-transition-duration: .5s;
-  -moz-transition-duration: .5s;
-  -ms-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s;
-}
-
-.group-photos li a:hover, .group-photos li a:active {
-  border-color: #17181c;
-  outline: 1px solid #17181c;
-}
-
-.group-photos li:nth-child(4n+4) {
-  margin-right: 0;
+.status-message {
+	margin: 0 0 8em 0;
 }
 
 .about {
-  border-top: 1px solid #efefef;
-  box-shadow: 0 -1px 0 rgba(255,255,255,.75);
-  margin-top: 1.5em;
-  padding-top: 1.5em;
-  text-align: left;
+	background: #4d4d4f;
+	border-top: 1px solid rgba(255,255,255,.25);
+	margin: 1.5em 0 0 0;
+	padding: 1.5em 12.5%;
+	text-align: left;
+	width: 100%;
 }
 
-.about img {padding: 1.25em 0;}
+.about img {
+	margin: 0;
+}
+
+.right {
+	float: right;
+}
 
 .left {
-  float: left;
-  margin-right: 1em;
+	float: left;
+}
+
+.clear {
+	clear: both;
 }

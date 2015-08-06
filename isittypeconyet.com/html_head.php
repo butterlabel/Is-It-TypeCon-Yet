@@ -36,5 +36,5 @@
 </script>
   <div class="wrap">
     <div class="logo-image">
-      <img src="images/logo-typecon-600.gif" alt="TypeCon 2014: Capitolized">
+      <img src="images/condensed-title.svg" alt="TypeCon 2015: Condensed">
     </div>

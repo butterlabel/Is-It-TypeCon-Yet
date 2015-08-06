@@ -1,21 +1,22 @@
 <?php
-  // Set the timezone:
-  date_default_timezone_set('America/Los_Angeles');
+	// Set the timezone:
+	date_default_timezone_set('America/Los_Angeles');
 
-  include("html_head.php");
+	include("html_head.php");
     
-  require_once("phpflickr/phpFlickr.php");
-
-  include("group-photos.php");
+	// require_once("phpflickr/phpFlickr.php");
+	// include("group-photos.php");
 
 	// Get current time
 	$current = date("Y-m-d h:i:s");
-  // debug: 
-  // $current = "2013-08-26 12:00:00";
+	// debug: 
+	// $current = "2015-08-26 12:00:00";
+	// $current = "2015-08-12 12:00:00";
+
 
 	// Set start date of Typecon
-	$typecon_start = "2014-07-30 00:00:00";
-	$typecon_end = "2014-08-03 00:00:00";
+	$typecon_start = "2015-08-12 00:00:00";
+	$typecon_end = "2015-08-16 00:00:00";
 
 	// Convert current and start times to a time-based value
 	$start = strtotime($typecon_start);
@@ -26,13 +27,13 @@
 	//echo " " . $now;
 
 	if($start > $now) {
-		 $status = '<p>Registration isn&rsquo;t open just yet. Until then, enjoy photos from previous years.</p>';
-		 $title = "July 30th &ndash; August 3rd, 2014";
+		 $status = '<p class="status-message">Not quite, but <a href="http://typecon.com/register">registration is open</a>. Why not sign up for a <a href="http://www.typecon.com/workshops">workshop</a> too?</p>';
+		 $title = "August 12th &ndash; 16rd, 2015";
 	} else if($end < $now) {
 		$title = "Thanks for another great TypeCon";
-		$status = '<h1><a href="http://typecon.com"><img src="images/next-year.gif" alt="See you next year"></a></h1><p>Thanks to attendees and sponsors for another great year!</p>';
+		$status = '<p class="status-message">Thanks to attendees and sponsors for another great conference.<br>See you next year!</p>';
 	} else if($start < $now) {
-		$status = '<h1><a href="http://typecon.com/register"><img src="images/stamp.jpg" alt="Welcome to Washington."></a></h1>';
+		$status = '<p class="status-message"><b>Yes.</b> Type Crit &mdash; bring it!</p>';
 		$title = "Type Crit - bring it!";
 	} else {
 		$status = "WTF";
@@ -42,16 +43,20 @@
 
 <!-- <?php echo $typecon_end; ?> -->
 
-	<p class="event-info"><b>TypeCon: Capitolized</b> <time class="dtstart" dateime="2014-07-30">July&nbsp;30th</time>&nbsp;&ndash;&nbsp;<time class="dtend" dateime="2014-08-03">August&nbsp;3rd,&nbsp;2014</time></p>
+	<p class="event-info"><time class="dtstart" dateime="2015-08-12">August&nbsp;12th</time>&nbsp;&ndash;&nbsp;<time class="dtend" dateime="2015-08-16">16th,&nbsp;2015</time></p>
 
-  <?php echo $status; ?>
+	<?php echo $status; ?>
 
 	<div class="fb-like" data-href="http://isittypeconyet.com/" data-send="false" data-width="360" data-show-faces="false"></div>
-
-	<div class="about">
-		<img src="images/typecon.png" alt="TypeCon" class="left">
-		<p><a href="http://typecon.com">TypeCon</a> is an annual conference presented by the non-profit <a href="http://typesociety.org">Society of Typographic Aficionados</a> (SOTA), an international organization dedicated to the promotion, study, and support of typography and related arts.</p>
 	</div>
-  </div>
+	<div class="about">
+		<div class="sota-logo left">
+			<img src="images/sota-logo.svg" alt="Society of Typographic Aficionados">
+		</div>
+		<div class="right">
+			<p><a href="http://typecon.com">TypeCon</a> is an annual conference presented by the non-profit <a href="http://typesociety.org">Society of Typographic Aficionados</a> (SOTA), an international organization dedicated to the promotion, study, and support of typography and related arts.</p>
+		</div>
+		<div class="clear"></div>
+	</div>
 </body>
 </html>
