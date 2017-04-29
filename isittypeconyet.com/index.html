@@ -4,8 +4,7 @@
 
 	include("html_head.php");
     
-	// require_once("phpflickr/phpFlickr.php");
-	// include("group-photos.php");
+	require_once("phpflickr/phpFlickr.php");
 
 	// Get current time
 	$current = date("Y-m-d h:i:s");
@@ -27,7 +26,7 @@
 	//echo " " . $now;
 
 	if($start > $now) {
-		 $status = '<p class="status-message">Not quite, but <a href="http://typecon.com/register">registration is open</a>. Why not sign up for a <a href="http://www.typecon.com/workshops">workshop</a> too?</p>';
+		 $status = '<p class="status-message">No, it&rsquo;s not quite TypeCon yet, but <a href="http://typecon.com/register">registration is open</a>. Why not sign up for a <a href="http://www.typecon.com/workshops">workshop</a> too?</p>';
 		 $title = "August 12th &ndash; 16rd, 2015";
 	} else if($end < $now) {
 		$title = "Thanks for another great TypeCon";
@@ -54,9 +53,10 @@
 			<img src="images/sota-logo.svg" alt="Society of Typographic Aficionados">
 		</div>
 		<div class="right">
-			<p><a href="http://typecon.com">TypeCon</a> is an annual conference presented by the non-profit <a href="http://typesociety.org">Society of Typographic Aficionados</a> (SOTA), an international organization dedicated to the promotion, study, and support of typography and related arts.</p>
+			<p><a href="http://typecon.com">TypeCon</a> is an annual conference presented by the non-profit <a href="http://typesociety.org">Society of Typographic Aficionados</a> (SOTA), an international organization dedicated to the promotion, study, and support of typography and related arts. Enjoy the latest from the official <a href="https://flickr.com/groups/typecon/">Flickr group</a>.</p>
 		</div>
 		<div class="clear"></div>
+		<?php include("group-photos.php"); ?>
 	</div>
 </body>
 </html>

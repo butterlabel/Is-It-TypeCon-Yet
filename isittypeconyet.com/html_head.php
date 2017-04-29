@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Is it Typecon yet?</title>
+  <title>Is it TypeCon yet?</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Open Graph Metadata -->
@@ -20,9 +20,10 @@
         scriptTimeout: 3000
       };
       var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/( |^)wf-loading( |$)/g,"");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script");tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(a&&a!="complete"&&a!="loaded")return;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
-  </script>
-  <link rel="stylesheet" href="css/site.css">
+	})();
+	</script>
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/normalize-opentype.css">
 </head>
 <body>
   <div id="fb-root"></div>

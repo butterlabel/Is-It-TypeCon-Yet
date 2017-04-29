@@ -6,6 +6,7 @@ body {
 	background-size: cover;
 	color: #ffffff;
 	font-family: "abril-text", georgia, serif;
+	font-feature-settings: "liga", "kern";
 	font-size: 100%;
 	font-style: normal;
 	font-weight: 400;
@@ -59,9 +60,13 @@ b {font-weight: 600;}
 	background: #4d4d4f;
 	border-top: 1px solid rgba(255,255,255,.25);
 	margin: 1.5em 0 0 0;
-	padding: 1.5em 12.5%;
+	padding: 6em 12.5%;
 	text-align: left;
 	width: 100%;
+}
+
+.about p {
+	font-feature-settings: "liga", "kern";
 }
 
 .about img {
@@ -79,3 +84,41 @@ b {font-weight: 600;}
 .clear {
 	clear: both;
 }
+
+.group-photos {
+	list-style-type: none;
+	margin: 3em auto;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.group-photos li {
+	float: left;
+	margin: 0 .75em .75em 0;
+	padding: 0;
+}
+
+.group-photos li img {
+	height: 150px;
+	vertical-align: bottom;
+	width: 150px;
+}
+
+.group-photos li a {
+	border: 8px solid #444;
+	display: block;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.group-photos li a:hover, .group-photos li a:active {
+	border-color: #fff200;
+}
+
+/*.group-photos li:nth-child(6n+6) {
+	margin-right: 0;
+}*/
